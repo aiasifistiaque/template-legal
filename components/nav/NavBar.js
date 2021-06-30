@@ -16,7 +16,7 @@ const variants = {
 	closed: { display: 'none', opacity: 0 },
 };
 
-const NavBar = ({ barPressed, open, close }) => {
+const NavBar = ({ barPressed, open, close, select }) => {
 	const { height, width, isDesktop } = useGetWindowSize();
 	const { scroll } = useGetWindowScroll();
 
@@ -45,45 +45,48 @@ const NavBar = ({ barPressed, open, close }) => {
 					: styles.navbar
 			}>
 			<div className={styles.navbrand}>
-				<a>Legal</a>
+				<a>Think Legal</a>
 			</div>
 			<div className={scroll > 50 ? styles.navitemsInverted : styles.navitems}>
 				{width > 1000 ? (
-					<NavItemsBigScreen />
+					<NavItemsBigScreen select={item => select(item)} />
 				) : (
 					<FontAwesomeIcon
-						icon={barPressed ? faTimes : faBars}
+						icon={faBars}
 						onClick={open}
 						className={styles.navcollapse}
 					/>
 				)}
 			</div>
 			<animated.div className={styles.navitemsSmall} style={springStyle}>
-				<NavItemsSmallScreen close={close} />
+				<NavItemsSmallScreen close={close} select={item => select(item)} />
 			</animated.div>
-			{/* <motion.div
-				animate={barPressed ? 'open' : 'closed'}
-				variants={variants}
-				className={styles.smallscreenitems}>
-				<NavItemsBigScreen />
-			</motion.div> */}
 		</div>
 	);
 };
 
-const NavItemsBigScreen = () => {
+const NavItemsBigScreen = ({ select }) => {
 	return (
 		<>
-			<a>Home</a>
-			<a>About</a>
-			<a>Feature</a>
-			<a>Team</a>
-			<a>Contact</a>
+			<a onClick={() => select('home')}>Home</a>
+			<a onClick={() => select('about')}>About</a>
+			<a onClick={() => select('practice')}>Practice Areas</a>
+			<a onClick={() => select('team')}>Team</a>
+			<a onClick={() => select('contact')}>Contact</a>
 		</>
 	);
 };
 
-const NavItemsSmallScreen = ({ close }) => {
+const NavItemsSmallScreen = ({ close, select }) => {
+	const sel = item => {
+		close();
+		setTimeout(
+			function () {
+				select(item);
+			},
+			[100]
+		);
+	};
 	return (
 		<>
 			<a>
@@ -94,15 +97,11 @@ const NavItemsSmallScreen = ({ close }) => {
 					className={styles.navCloseBtn}
 				/>
 			</a>
-			<a>Home</a>
-			<a>About</a>
-			<a>Feature</a>
-			<a>Team</a>
-			<a>Contact</a>
-			<a>Legal</a>
-			<a>History</a>
-			<a>Terms of use</a>
-			<a>Privacy Policy</a>
+			<a onClick={() => sel('home')}>Home</a>
+			<a onClick={() => sel('about')}>About</a>
+			<a onClick={() => sel('practice')}>Practice Areas</a>
+			<a onClick={() => sel('team')}>Team</a>
+			<a onClick={() => sel('contact')}>Contact</a>
 		</>
 	);
 };

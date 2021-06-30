@@ -6,7 +6,7 @@ import NavBar from '../nav/NavBar';
 import Head from 'next/head';
 import Footer from '../nav/Footer';
 
-const Page = ({ title, children }) => {
+const Page = ({ title, children, setScrollItem }) => {
 	const [openNav, setOpenNav] = useState(false);
 	return (
 		<div>
@@ -19,6 +19,7 @@ const Page = ({ title, children }) => {
 				barPressed={openNav}
 				open={() => setOpenNav(true)}
 				close={() => setOpenNav(false)}
+				select={item => setScrollItem(item)}
 			/>
 
 			<main

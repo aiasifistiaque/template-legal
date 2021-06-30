@@ -3,7 +3,7 @@
   display: -ms-flexbox;
   display: flex;
   position: fixed;
-  height: 6em;
+  height: 5em;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -16,6 +16,12 @@
   z-index: 9;
 }
 
+@media (min-width: 640px) {
+  .navbar, .navbarInverted, .navbarBlurred {
+    height: 6em;
+  }
+}
+
 .navbarInverted {
   color: black;
   background-color: white;
@@ -24,24 +30,29 @@
 }
 
 .navbarBlurred {
-  background-color: rgba(255, 255, 255, 0.5);
-  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
-          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
   color: black;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .navbrand {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  padding: 0 10%;
-  font-size: 1.2em;
+  padding: 0 5%;
+  font-size: 1.4em;
   font-weight: 600;
-  letter-spacing: 4px;
+  letter-spacing: -5px;
+}
+
+@media (min-width: 640px) {
+  .navbrand {
+    padding: 0 10%;
+  }
 }
 
 .navbrand a {
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .navitems, .navitemsInverted {
@@ -57,16 +68,25 @@
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
-  padding: 0 10%;
+  padding: 0 5%;
+}
+
+@media (min-width: 640px) {
+  .navitems, .navitemsInverted {
+    padding: 0 10%;
+  }
 }
 
 .navitems .navcollapse, .navitemsInverted .navcollapse {
   cursor: pointer;
-  height: 12px;
+  height: 18px;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  padding: 0px 5% 0 30%;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 .navitems a, .navitemsInverted a {
@@ -84,6 +104,10 @@
   color: inherit;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .navitems a:hover, .navitemsInverted a:hover {
@@ -120,6 +144,10 @@
           justify-content: center;
   overflow-y: scroll;
   z-index: 100;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .smallscreenitems a {
