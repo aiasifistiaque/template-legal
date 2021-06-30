@@ -84,7 +84,7 @@
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  padding: 0px 5% 0 30%;
+  padding: 0px 5%;
   -ms-flex-item-align: end;
       align-self: flex-end;
 }
