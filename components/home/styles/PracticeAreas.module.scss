@@ -1,0 +1,80 @@
+//
+@import '../../../styles/utilities/mixin';
+@import '../../../styles/utilities/constants';
+
+.practiceAreas {
+	display: flex;
+	min-height: 100vh;
+	align-items: center;
+	justify-content: center;
+	padding: $hor-page-padding $hor-page-padding/2;
+	flex-direction: column;
+	@include desktop {
+		padding: $hor-page-padding/2 $hor-page-padding;
+	}
+}
+
+.practiceAreaHeaders {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-direction: column;
+	text-align: center;
+	padding: 5% 0;
+
+	h2 {
+		@extend %header-title;
+	}
+	h4 {
+		font-weight: 400;
+		color: $primaryLight;
+		padding: 1em 0;
+	}
+	span {
+		@include header-span;
+		margin: 1em;
+	}
+
+	@include desktop {
+		h2 {
+			font-size: 2.5em;
+		}
+		h4 {
+			font-size: 1.3em;
+			width: 60%;
+		}
+	}
+}
+
+.practiceAreaContainer {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 5% 0;
+}
+
+.areaItem {
+	display: flex;
+	width: 100%;
+	min-width: 250px;
+	margin-top: 50px;
+	flex: 1;
+	align-items: flex-start;
+	justify-content: center;
+	.areaItemIcon {
+		min-width: 100px;
+		height: 50px;
+		margin-right: 2em;
+		@extend %icon-icon;
+	}
+	h5 {
+		@extend %icon-text-header;
+		margin-bottom: 0.5em;
+	}
+	p {
+		@extend %icon-text-p;
+	}
+	@include tab {
+		min-width: 350px;
+		margin-right: 50px;
+	}
+}

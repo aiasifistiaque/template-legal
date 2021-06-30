@@ -1,0 +1,21 @@
+//
+@import '../../../styles/utilities/constants';
+@import '../../../styles/utilities/mixin';
+
+.footer {
+	display: flex;
+	flex: 1;
+	background-color: lighten(black, 10);
+	color: whitesmoke;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	padding: 2em;
+	letter-spacing: 2px;
+
+	P {
+		text-transform: uppercase;
+		font-size: 0.8em;
+		font-weight: 500;
+	}
+}

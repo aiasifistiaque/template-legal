@@ -1,0 +1,45 @@
+.heroActionButton {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: white;
+  letter-spacing: 1.5px;
+  color: black;
+  padding: 0.8em 1.5em;
+  border-radius: 30px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  text-shadow: none;
+  font-size: 0.9em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.heroActionButton:active {
+  background-color: #666666;
+}
+
+@media (min-width: 1008px) {
+  .heroActionButton {
+    padding: 0.9em 2em;
+    font-size: 1em;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+  .heroActionButton:hover {
+    background-color: #d9d9d9;
+  }
+  .heroActionButton:active {
+    background-color: #666666;
+  }
+}
+/*# sourceMappingURL=HeroActionButton.module.css.map */

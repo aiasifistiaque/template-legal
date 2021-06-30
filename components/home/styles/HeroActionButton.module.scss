@@ -1,0 +1,37 @@
+//
+@import '../../../styles/utilities/mixin';
+
+.heroActionButton {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background-color: white;
+	letter-spacing: 1.5px;
+	color: black;
+	padding: 0.8em 1.5em;
+	border-radius: 30px;
+	@include btn-text-unselect;
+	cursor: pointer;
+	text-shadow: none;
+	font-size: 0.9em;
+	font-weight: 600;
+	text-transform: uppercase;
+
+	&:active {
+		background-color: darken(white, 60);
+	}
+
+	@include desktop {
+		padding: 0.9em 2em;
+		font-size: 1em;
+		transition: 0.2s;
+
+		&:hover {
+			background-color: darken(white, 15);
+		}
+
+		&:active {
+			background-color: darken(white, 60);
+		}
+	}
+}

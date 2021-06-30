@@ -1,0 +1,96 @@
+//
+@import '../../../styles/utilities/constants';
+@import '../../../styles/utilities/mixin';
+
+.whsSection {
+	@extend %sectionContainerWithImage;
+
+	background-color: whitesmoke;
+
+	.imageContainer {
+		background-image: url('../../../public/whs.jpeg');
+	}
+	.textContainer {
+		//section header goes here
+
+		//this is the icon container
+		.itemContainer {
+			display: flex;
+			width: 100%;
+			min-width: 250px;
+			margin-top: 50px;
+			flex: 1;
+			align-items: flex-start;
+			justify-content: center;
+			flex-wrap: wrap;
+
+			@include tab {
+				min-width: 350px;
+				margin-right: 50px;
+			}
+
+			.item {
+				display: flex;
+				width: 100%;
+				min-width: 250px;
+				margin: 25px 0;
+				flex: 1;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				text-align: center;
+
+				@include tab {
+					align-items: flex-start;
+					text-align: start;
+					margin: 25px 25px 25px 0;
+				}
+
+				.icon {
+					height: 40px;
+					@extend %icon-icon;
+				}
+				h5 {
+					@extend %icon-text-header;
+					margin: 1.2em 0 0.7em 0;
+				}
+				p {
+					@extend %icon-text-p;
+				}
+			}
+		}
+	}
+}
+
+.sectionHeaderLeft {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-direction: column;
+	text-align: center;
+	h2 {
+		@extend %header-title;
+	}
+	h4 {
+		font-weight: 400;
+		color: $primaryLight;
+		padding: 1em 0;
+	}
+
+	span {
+		@include header-span;
+		margin: 1em 0;
+	}
+	@include tab {
+		text-align: start;
+		align-items: flex-start;
+
+		h2 {
+			font-size: 2.5em;
+		}
+		h4 {
+			font-size: 1.2em;
+			width: 80%;
+		}
+	}
+}

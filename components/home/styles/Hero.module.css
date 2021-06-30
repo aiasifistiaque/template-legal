@@ -1,0 +1,99 @@
+.heroImageOverlay h1 {
+  font-family: merriweather, serif;
+  font-weight: 500;
+  font-size: 2em;
+  letter-spacing: 2px;
+}
+
+.heroContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+}
+
+.heroContainer {
+  background-image: url("../../../public/background.jpeg");
+}
+
+.heroImageOverlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 80vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  letter-spacing: 5px;
+  padding: 0 10%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding-top: 55%;
+  padding-bottom: 5%;
+}
+
+.heroImageOverlay h1 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.heroImageOverlay h3 {
+  font-size: 1rem;
+  font-weight: 100;
+  width: 80vw;
+  letter-spacing: 2px;
+  line-height: 2rem;
+}
+
+@media (min-width: 640px) {
+  .heroImageOverlay {
+    padding-top: 40%;
+    height: 80vh;
+  }
+  .heroImageOverlay h1 {
+    font-size: 3rem;
+    letter-spacing: 5px;
+  }
+  .heroImageOverlay h3 {
+    font-size: 1.5rem;
+    width: 60vw;
+    line-height: 2.2rem;
+  }
+}
+
+@media (min-width: 1008px) {
+  .heroImageOverlay {
+    padding-top: 20%;
+    padding-bottom: 8%;
+    height: 100vh;
+  }
+  .heroImageOverlay h1 {
+    font-size: 4rem;
+  }
+  .heroImageOverlay h3 {
+    font-size: 1.5rem;
+    width: 40vw;
+    line-height: 2.2rem;
+  }
+}
+/*# sourceMappingURL=Hero.module.css.map */

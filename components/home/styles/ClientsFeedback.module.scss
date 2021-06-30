@@ -1,0 +1,42 @@
+//
+//
+@import '../../../styles/utilities/constants';
+@import '../../../styles/utilities/mixin';
+
+.cfbContainer {
+	display: flex;
+	flex: 1;
+	width: 100%;
+	flex-direction: column;
+	align-items: center;
+
+	@include tab {
+		flex-direction: row;
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
+	.item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		max-width: 250px;
+		margin: 2em 0;
+		@include tab {
+			max-width: 300px;
+		}
+	}
+	.imageContainer {
+		.image {
+			object-fit: cover;
+			border-radius: 500px;
+			object-position: top center;
+		}
+	}
+	blockquote {
+		line-height: 2em;
+		font-style: italic;
+		color: $primaryLight;
+		margin: 1em 0;
+	}
+}

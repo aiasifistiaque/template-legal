@@ -1,0 +1,77 @@
+//
+@import '../../../styles/utilities/constants';
+@import '../../../styles/utilities/mixin';
+
+.aofContainer {
+	min-height: 110vh;
+	display: flex;
+	padding: 0 $hor-page-padding/2;
+	margin: 5% 0;
+	flex-direction: column;
+
+	@include desktop {
+		flex-direction: row;
+		margin-bottom: 0;
+	}
+
+	.imageContainer {
+		display: flex;
+		flex: 1;
+		position: relative;
+		min-height: 60vh;
+
+		@include tab {
+			min-height: 80vh;
+		}
+
+		.image {
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+	.textContainer {
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+		justify-content: center;
+		box-sizing: border-box;
+		text-align: center;
+		justify-content: center;
+		margin: 5% 0;
+
+		@include desktop {
+			text-align: start;
+			justify-content: flex-start;
+			margin: 10%;
+		}
+
+		h2 {
+			@extend %header-title;
+			font-size: 2em;
+			margin: 10px 0;
+			@include desktop {
+				font-size: 2.5em;
+			}
+		}
+		span {
+			@include header-span;
+			margin: 1em 0;
+			align-self: center;
+
+			@include desktop {
+				align-self: flex-start;
+				margin: 2em 0;
+			}
+		}
+		p {
+			font-size: 1em;
+			color: $primaryLight;
+			margin: 10px 0;
+			line-height: 1.5em;
+			@include desktop {
+				line-height: 2em;
+				font-size: 1.1em;
+			}
+		}
+	}
+}

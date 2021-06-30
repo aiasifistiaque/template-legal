@@ -1,0 +1,104 @@
+//
+@import '../../../styles/utilities/constants';
+@import '../../../styles/utilities/mixin';
+
+.fcSection {
+	@extend %sectionContainerWithImage;
+	background-color: white;
+
+	.imageContainer {
+		background-image: url('../../../public/consult.jpeg');
+	}
+	.textContainer {
+		//section header goes here
+
+		//this is the icon container
+		.inputContainer {
+			display: flex;
+			width: 100%;
+			//min-width: 250px;
+			margin: 2em 0;
+
+			flex: 1;
+			align-items: flex-start;
+			flex-direction: column;
+
+			@include tab {
+				min-width: 350px;
+				margin-right: 50px;
+			}
+			%inp {
+				padding: 1.2em;
+				border: none;
+				margin: 1em;
+				margin-left: 0;
+				width: 100%;
+				background-color: #f3f3f3;
+				border: 2px solid transparent;
+				transition: 0.2s;
+				border-radius: 3px;
+				letter-spacing: 1.5px;
+				font-size: 0.8em;
+				@include desktop {
+					&:hover {
+						border: 2px solid black;
+					}
+				}
+
+				&:focus {
+					border: 2px solid black;
+					outline: none;
+				}
+				&::placeholder {
+					font-size: 1em;
+					color: lighten(black, 50);
+				}
+				font-style: normal;
+				font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+					Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+				font-weight: 500;
+			}
+
+			input {
+				@extend %inp;
+				//height: 50px;
+			}
+
+			textarea {
+				@extend %inp;
+				resize: none;
+				padding: 1.5em 1.2em;
+				color: black;
+				&::placeholder {
+					color: lighten(black, 50);
+				}
+			}
+
+			.submitButton {
+				@include tab {
+					width: 180px;
+				}
+				background-color: black;
+				color: white;
+				cursor: pointer;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				border: none;
+				height: 50px;
+				text-transform: uppercase;
+
+				@include desktop {
+					&:hover {
+						background-color: lighten(black, 20);
+						border: none;
+					}
+				}
+
+				&:active {
+					background-color: lighten(black, 40);
+				}
+			}
+		}
+	}
+}

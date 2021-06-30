@@ -1,0 +1,76 @@
+//
+@import '../../../styles/utilities/constants';
+@import '../../../styles/utilities/mixin';
+
+%heroL {
+	display: flex;
+	flex: 1;
+	background-position: center;
+	background-size: cover;
+	width: 100vw;
+}
+
+.heroContainer {
+	@extend %heroL;
+	background-image: url('../../../public/background.jpeg');
+}
+
+.heroImageOverlay {
+	display: flex;
+	flex: 1;
+	height: 80vh;
+	background-color: rgba(black, 0.5);
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	color: white;
+	text-shadow: 4px 4px 4px rgba(black, 0.2);
+	text-align: center;
+	letter-spacing: 5px;
+	padding: $page-padding;
+	justify-content: space-evenly;
+	padding-top: 55%;
+	padding-bottom: 5%;
+
+	h1 {
+		@extend %header-title;
+		font-size: 2rem;
+		font-weight: 400;
+	}
+	h3 {
+		font-size: 1rem;
+		font-weight: 100;
+		width: 80vw;
+		letter-spacing: 2px;
+		line-height: 2rem;
+	}
+
+	@include tab {
+		padding-top: 40%;
+
+		height: 80vh;
+		h1 {
+			font-size: 3rem;
+			letter-spacing: 5px;
+		}
+		h3 {
+			font-size: 1.5rem;
+			width: 60vw;
+			line-height: 2.2rem;
+		}
+	}
+
+	@include desktop {
+		padding-top: 20%;
+		padding-bottom: 8%;
+		height: 100vh;
+		h1 {
+			font-size: 4rem;
+		}
+		h3 {
+			font-size: 1.5rem;
+			width: 40vw;
+			line-height: 2.2rem;
+		}
+	}
+}

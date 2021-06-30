@@ -1,0 +1,30 @@
+//@at-root
+@import '../../../styles/utilities/constants';
+
+.container {
+	display: flex;
+	min-height: 100vh;
+	flex: 1;
+	flex-direction: column;
+}
+
+.containerOverLay {
+	display: flex;
+	position: fixed;
+	flex-direction: column;
+	//overflow-y: none;
+	overflow-y: hidden;
+}
+
+.overlay {
+	display: flex;
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	background-color: rgba(black, 0.8);
+	backdrop-filter: blur(0px);
+
+	align-items: center;
+	justify-content: center;
+	z-index: 24;
+}
