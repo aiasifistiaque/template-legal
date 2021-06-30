@@ -12,7 +12,7 @@ const Page = ({ title, children, setScrollItem }) => {
 		<div>
 			<Head>
 				<title>Legal Portfolio Template</title>
-				<meta name='description' content='' />
+				<meta name='description' content=';asdlka' />
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<NavBar

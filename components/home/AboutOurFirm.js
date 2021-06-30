@@ -8,6 +8,7 @@ const AboutOurFirm = () => {
 			<div className={styles.imageContainer}>
 				<Image
 					src='/tommy.jpeg'
+					alt='About our firm'
 					height={100}
 					width={1000}
 					className={styles.image}

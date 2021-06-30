@@ -44,6 +44,7 @@ const Item = ({ item }) => {
 					height={50}
 					width={50}
 					className={styles.image}
+					alt='Client Image'
 				/>
 			</div>
 			<blockquote>
