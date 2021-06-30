@@ -47,8 +47,9 @@ const Item = ({ item }) => {
 				/>
 			</div>
 			<blockquote>
-				"Legal represented me on a matter where I was looking at significant
-				prison time. Immediately, I knew that I was in good hands."
+				{
+					'"Legal represented me on a matter where I was looking at significant prison time. Immediately, I knew that I was in good hands."'
+				}
 			</blockquote>
 			<h5> - {item.name}</h5>
 		</div>
