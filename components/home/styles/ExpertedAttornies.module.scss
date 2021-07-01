@@ -38,8 +38,8 @@
 		}
 		.textContainer {
 			display: flex;
-			@include flexCenter(column);
 			padding: 20px 0;
+			@include flexCenter(column);
 
 			h5 {
 				font-size: 1.5em;

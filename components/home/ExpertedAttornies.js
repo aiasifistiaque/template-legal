@@ -39,7 +39,7 @@ const Items = ({ item }) => {
 					height={450}
 					width={400}
 					className={styles.image}
-					Alt={item.name}
+					alt={item.name}
 				/>
 			</div>
 			<div className={styles.textContainer}>

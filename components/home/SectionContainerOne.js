@@ -5,7 +5,7 @@ import styles from './styles/PracticeAreas.module.css';
 
 const SectionContainerOne = ({ children, style }) => {
 	return (
-		<div div className={styles.practiceAreas} style={style}>
+		<div className={styles.practiceAreas} style={style}>
 			{children}
 		</div>
 	);

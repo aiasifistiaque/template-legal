@@ -1,45 +1,261 @@
+/* Margin */
+.my-1 {
+	margin: 1rem 0;
+}
+
+.my-2 {
+	margin: 1.5rem 0;
+}
+
+.my-3 {
+	margin: 2rem 0;
+}
+
+.my-4 {
+	margin: 3rem 0;
+}
+
+.my-5 {
+	margin: 4rem 0;
+}
+
+.mx-1 {
+	margin: 0 1rem;
+}
+
+.mx-2 {
+	margin: 0 1.5rem;
+}
+
+.mx-3 {
+	margin: 0 2rem;
+}
+
+.mx-4 {
+	margin: 0 3rem;
+}
+
+.mx-5 {
+	margin: 0 4rem;
+}
+
+.m-1 {
+	margin: 1rem;
+}
+
+.m-2 {
+	margin: 1.5rem;
+}
+
+.m-3 {
+	margin: 2rem;
+}
+
+.m-4 {
+	margin: 3rem;
+}
+
+.m-5 {
+	margin: 4rem;
+}
+
+/* Padding */
+.py-1 {
+	padding: 1rem 0;
+}
+
+.py-2 {
+	padding: 1.5rem 0;
+}
+
+.py-3 {
+	padding: 2rem 0;
+}
+
+.py-4 {
+	padding: 3rem 0;
+}
+
+.py-5 {
+	padding: 4rem 0;
+}
+
+.px-1 {
+	padding: 0 1rem;
+}
+
+.px-2 {
+	padding: 0 1.5rem;
+}
+
+.px-3 {
+	padding: 0 2rem;
+}
+
+.px-4 {
+	padding: 0 3rem;
+}
+
+.px-5 {
+	padding: 0 4rem;
+}
+
+.p-1 {
+	padding: 1rem;
+}
+
+.p-2 {
+	padding: 1.5rem;
+}
+
+.p-3 {
+	padding: 2rem;
+}
+
+.p-4 {
+	padding: 3rem;
+}
+
+.p-5 {
+	padding: 4rem;
+}
+
+@-webkit-keyframes slideInFromBottom {
+	0% {
+		-webkit-transform: translateY(100%);
+		transform: translateY(100%);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes slideInFromBottom {
+	0% {
+		-webkit-transform: translateY(100%);
+		transform: translateY(100%);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes slideInFromLeft {
+	0% {
+		-webkit-transform: translateX(-100%);
+		transform: translateX(-100%);
+	}
+	100% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+}
+
+@keyframes slideInFromLeft {
+	0% {
+		-webkit-transform: translateX(-100%);
+		transform: translateX(-100%);
+	}
+	100% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+}
+
+@-webkit-keyframes slideInFromRight {
+	0% {
+		-webkit-transform: translateX(100%);
+		transform: translateX(100%);
+	}
+	100% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+}
+
+@keyframes slideInFromRight {
+	0% {
+		-webkit-transform: translateX(100%);
+		transform: translateX(100%);
+	}
+	100% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+}
+
+@-webkit-keyframes slideInFromTop {
+	0% {
+		-webkit-transform: translateY(-100%);
+		transform: translateY(-100%);
+	}
+	100% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+}
+
+@keyframes slideInFromTop {
+	0% {
+		-webkit-transform: translateY(-100%);
+		transform: translateY(-100%);
+	}
+	100% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+}
+
 .heroActionButton {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: white;
-  letter-spacing: 1.5px;
-  color: black;
-  padding: 0.8em 1.5em;
-  border-radius: 30px;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  cursor: pointer;
-  text-shadow: none;
-  font-size: 0.9em;
-  font-weight: 600;
-  text-transform: uppercase;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	background-color: white;
+	letter-spacing: 1.5px;
+	color: black;
+	padding: 0.8em 1.5em;
+	border-radius: 30px;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor: pointer;
+	text-shadow: none;
+	font-size: 0.9em;
+	font-weight: 600;
+	text-transform: uppercase;
+	-webkit-animation: slideInFromBottom 0.5s ease-in;
+	animation: slideInFromBottom 0.5s ease-in;
 }
 
 .heroActionButton:active {
-  background-color: #666666;
+	background-color: #666666;
 }
 
 @media (min-width: 1008px) {
-  .heroActionButton {
-    padding: 0.9em 2em;
-    font-size: 1em;
-    -webkit-transition: 0.2s;
-    transition: 0.2s;
-  }
-  .heroActionButton:hover {
-    background-color: #d9d9d9;
-  }
-  .heroActionButton:active {
-    background-color: #666666;
-  }
+	.heroActionButton {
+		padding: 0.9em 2em;
+		font-size: 1em;
+		-webkit-transition: 0.2s;
+		transition: 0.2s;
+	}
+	.heroActionButton:hover {
+		background-color: #d9d9d9;
+	}
+	.heroActionButton:active {
+		background-color: #666666;
+	}
 }
 /*# sourceMappingURL=HeroActionButton.module.css.map */

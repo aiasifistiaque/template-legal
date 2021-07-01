@@ -6,7 +6,7 @@ import NavBar from '../nav/NavBar';
 import Head from 'next/head';
 import Footer from '../nav/Footer';
 
-const Page = ({ title, children, setScrollItem }) => {
+const Page = ({ title, children, setScrollItem, style }) => {
 	const [openNav, setOpenNav] = useState(false);
 	return (
 		<div>
@@ -24,7 +24,8 @@ const Page = ({ title, children, setScrollItem }) => {
 
 			<main
 				className={openNav ? styles.containerOverLay : styles.container}
-				onClick={() => setOpenNav(false)}>
+				onClick={() => setOpenNav(false)}
+				style={style || {}}>
 				<div
 					className={styles.overlay}
 					style={!openNav ? { display: 'none' } : {}}

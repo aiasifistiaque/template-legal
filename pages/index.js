@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import Page from '../components/layout/Page';
 import Hero from '../components/home/Hero';
 import PracticeAreas from '../components/home/PracticeAreas';
@@ -7,16 +7,17 @@ import AboutOurFirm from '../components/home/AboutOurFirm';
 import WhyHireUs from '../components/home/WhyHireUs';
 import ClientsFeedback from '../components/home/ClientsFeedback';
 import FreeConsultation from '../components/home/FreeConsultation';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Home() {
-	//const [scrollItem, setScrollItem] = useState('home');
-
 	const heroRef = useRef();
 	const aboutRef = useRef();
 	const practiceAreasRef = useRef();
 	const expertedAttorniesRef = useRef();
 	const whyHireUsRef = useRef();
 	const freeConsiltationRef = useRef();
+	const clientsFeedbackRef = useRef();
 	const refParams = { behavior: 'smooth', block: 'start' };
 
 	const scroll = item => {
@@ -35,24 +36,53 @@ export default function Home() {
 	};
 
 	return (
-		<Page setScrollItem={item => scroll(item)}>
+		<Page setScrollItem={item => scroll(item)} style={{ overflowY: 'hidden' }}>
 			<div ref={heroRef}>
 				<Hero />
 			</div>
-			<div ref={aboutRef}>
+
+			<AnimatedDiv ref={aboutRef}>
 				<AboutOurFirm />
-			</div>
-			<div ref={practiceAreasRef}>
+			</AnimatedDiv>
+
+			<AnimatedDiv ref={practiceAreasRef}>
 				<PracticeAreas />
-			</div>
-			<div ref={expertedAttorniesRef}>
+			</AnimatedDiv>
+			<AnimatedDiv ref={expertedAttorniesRef}>
 				<ExpertedAttornies />
-			</div>
-			<WhyHireUs />
-			<ClientsFeedback />
-			<div ref={freeConsiltationRef}>
+			</AnimatedDiv>
+			<AnimatedDiv ref={whyHireUsRef}>
+				<WhyHireUs />
+			</AnimatedDiv>
+			<AnimatedDiv ref={clientsFeedbackRef}>
+				<ClientsFeedback />
+			</AnimatedDiv>
+
+			<AnimatedDiv ref={freeConsiltationRef}>
 				<FreeConsultation />
-			</div>
+			</AnimatedDiv>
 		</Page>
 	);
 }
+
+const AnimatedDiv = ({ ref, children }) => {
+	useEffect(() => {
+		AOS.init({
+			duration: 2000,
+			once: true,
+			mirror: false,
+		});
+		//AOS.refresh();
+	}, []);
+	return (
+		<div
+			ref={ref}
+			data-aos='fade-up'
+			style={{
+				overflowY: 'hidden',
+				scrollbarWidth: 'none',
+			}}>
+			{children}
+		</div>
+	);
+};
