@@ -6,14 +6,12 @@
 	min-height: 100vh;
 	flex: 1;
 	flex-direction: column;
-	//overflow-y: hidden;
 }
 
 .containerOverLay {
 	display: flex;
 	position: fixed;
 	flex-direction: column;
-	//overflow-y: none;
 	overflow-y: hidden;
 }
 

@@ -6,7 +6,7 @@ import NavBar from '../nav/NavBar';
 import Head from 'next/head';
 import Footer from '../nav/Footer';
 
-const Page = ({ title, children, setScrollItem, style }) => {
+const Page = ({ children, setScrollItem, style }) => {
 	const [openNav, setOpenNav] = useState(false);
 	return (
 		<div>
